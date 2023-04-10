@@ -1,3 +1,5 @@
+-- TODO Fix me
+
 return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
@@ -9,4 +11,11 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    event = "User AstroFile",
+    cmd = { "TodoQuickFix" },
+  },
 }

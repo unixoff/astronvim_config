@@ -11,15 +11,27 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
+    ["<S-l>"] = { ":bnext<cr>", desc = "Next tab" },
+    ["<S-h>"] = { ":bprev<cr>", desc = "Previous tab" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- Modified move
+    ["<M-k>"] = { "<S-{>", desc = "Move cursor up through paragraph" },
+    ["<M-j>"] = { "<S-}>", desc = "Move cursor down through paragraph" },
+    ["<M-h>"] = { "b", desc = "Alias" },
+    ["<M-l>"] = { "w", desc = "Alias" },
+    ["<M-,>"] = { "yyddkP", desc = "Move line up" },
+    ["<M-m>"] = { "yyddp", desc = "Move line down" },
+    ["<M-d>"] = { "bdw", desc = "Delete word from any position" },
   },
   t = {
     -- setting a mapping to false will disable it
