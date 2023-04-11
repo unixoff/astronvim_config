@@ -16,6 +16,5 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
     event = "User AstroFile",
-    cmd = { "TodoQuickFix" },
   },
 }

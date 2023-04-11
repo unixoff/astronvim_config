@@ -32,6 +32,8 @@ return {
     ["<M-,>"] = { "yyddkP", desc = "Move line up" },
     ["<M-m>"] = { "yyddp", desc = "Move line down" },
     ["<M-d>"] = { "bdw", desc = "Delete word from any position" },
+    -- Find for Todo
+    ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TodoTelescope" },
   },
   t = {
     -- setting a mapping to false will disable it
