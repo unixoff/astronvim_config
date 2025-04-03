@@ -18,14 +18,14 @@ end
 require "lazy_setup"
 require "polish"
 
-require("neo-tree").setup({
+require("neo-tree").setup {
   window = {
     background = "none",
     mappings = {
       ["o"] = "open",
     },
   },
-})
+}
 
 vim.cmd [[
   highlight Normal guibg=NONE ctermbg=NONE
@@ -41,7 +41,8 @@ vim.cmd [[
   highlight NeoTreeStatusLineNC guibg=NONE ctermbg=NONE
 ]]
 
--- Переключение на следующий буфер
-vim.api.nvim_set_keymap('n', '<S-l>', ':bnext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-h>', ':bprev<CR>', { noremap = true, silent = true })
+vim.o.number = true
+vim.o.relativenumber = false
 
+vim.api.nvim_set_keymap("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-h>", ":bprev<CR>", { noremap = true, silent = true })
